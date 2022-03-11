@@ -46,8 +46,5 @@ end code block.
 
 
 
-[![Anurag's github stats](https://github-readme-stats.vercel.app/api?username={toyo30}&show_icons=true&theme={dracula})](https://github.com/{toyo30}/github-readme-stats)
-
-[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?toyo30=anuraghazra)](https://github.com/anuraghazra/github-readme-stats)
 
 [![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=toyo30)](https://github.com/toyo30/github-readme-stats)
