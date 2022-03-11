@@ -43,3 +43,7 @@ This is a normal paragraph:
     This is a code block.
     
 end code block.
+
+
+
+[![Anurag's github stats](https://github-readme-stats.vercel.app/api?username={toyo30}&show_icons=true&theme={theme})](https://github.com/{toyo30}/github-readme-stats)
