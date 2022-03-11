@@ -14,6 +14,10 @@
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=toyo30&layout=compact)](https://github.com/toyo30/github-readme-stats)
 
 
+> ### About algorithm(feat.백준)
+[![Solved.ac프로필](http://mazassumnida.wtf/api/v2/generate_badge?boj=toyo30)](https://solved.ac/toyo30)
+
+
 This is an H1
 
 This is an H2
@@ -30,7 +34,7 @@ This is an H2
 
 
 
-[![Solved.ac프로필](http://mazassumnida.wtf/api/v2/generate_badge?boj=toyo30)](https://solved.ac/toyo30)
+
 
 
 
