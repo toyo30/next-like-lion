@@ -1,12 +1,12 @@
 # 💻 멋사 10기 백민기🦁 
 
-### I'm
+> ### I'm
 * 고려대학교 국어국문학과/SW벤처 융합전공 17학번 백민기
 * Leveling up for Developer and Entrepreneur
 * I’m interested in how to make IT basied service.
 
 
-### About GitHub
+> ### About GitHub
 
 
 This is an H1
