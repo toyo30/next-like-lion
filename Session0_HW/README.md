@@ -7,6 +7,8 @@
 
 
 > ### About GitHub
+>	> stats
+[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=toyo30)](https://github.com/toyo30/github-readme-stats)
 
 
 This is an H1
@@ -21,7 +23,7 @@ This is an H2
 ###### This is a H6
 
 
-[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=toyo30)](https://github.com/toyo30/github-readme-stats)
+
 
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=toyo30&layout=compact)](https://github.com/toyo30/github-readme-stats)
 
