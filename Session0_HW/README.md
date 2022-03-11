@@ -7,8 +7,11 @@
 
 
 > ### About GitHub
-#### stats
+* #### stats
 [![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=toyo30)](https://github.com/toyo30/github-readme-stats)
+
+* #### most used languages
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=toyo30&layout=compact)](https://github.com/toyo30/github-readme-stats)
 
 
 This is an H1
@@ -25,7 +28,7 @@ This is an H2
 
 
 
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=toyo30&layout=compact)](https://github.com/toyo30/github-readme-stats)
+
 
 [![Solved.ac프로필](http://mazassumnida.wtf/api/v2/generate_badge?boj=toyo30)](https://solved.ac/toyo30)
 
