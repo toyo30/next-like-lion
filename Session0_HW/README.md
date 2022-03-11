@@ -7,7 +7,7 @@
 
 
 > ### About GitHub
->	> stats
+#### stats
 [![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=toyo30)](https://github.com/toyo30/github-readme-stats)
 
 
