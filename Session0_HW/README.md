@@ -18,6 +18,9 @@
 [![Solved.ac프로필](http://mazassumnida.wtf/api/v2/generate_badge?boj=toyo30)](https://solved.ac/toyo30)
 
 
+> ### Otherlink
+dev blog, daily blog, 인스타, soundcloud
+
 This is an H1
 
 This is an H2
