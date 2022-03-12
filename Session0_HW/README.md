@@ -17,9 +17,11 @@
 * 
 
 
-<a href="https://www.instagram.com/100_07i2/?hl=ko" target="_blank">![Instagram](https://img.shields.io/badge/100\\_07i2-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white)</a>
+<a href="https://www.instagram.com/100_07i2/?hl=ko" target="_blank">![Instagram](https://img.shields.io/badge/100__07i2-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white)</a>
 
 <a href="https://aleumdaum.tistory.com/" target="_blank">![Blogger](https://img.shields.io/badge/Blog-FF5722?style=for-the-badge&logo=blogger&logoColor=white)</a>
+
+<a href="https://soundcloud.com/zx6qpz78ervz/someone-come-in-summer-for" target="_blank">![Sound Cloud](https://img.shields.io/badge/sound%20cloud-FF5500?style=for-the-badge&logo=soundcloud&logoColor=white)</a>
 
 <br/>
 <br/>
