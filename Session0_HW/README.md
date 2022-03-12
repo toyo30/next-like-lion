@@ -23,6 +23,8 @@
 
 <a href="https://soundcloud.com/zx6qpz78ervz/someone-come-in-summer-for" target="_blank">![Sound Cloud](https://img.shields.io/badge/sound%20cloud-FF5500?style=for-the-badge&logo=soundcloud&logoColor=white)</a>
 
+![Gmail](https://img.shields.io/badge/toyoalsrl@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)
+
 <br/>
 <br/>
 
