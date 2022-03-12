@@ -15,8 +15,9 @@
 * Leveling up for Developer and Entrepreneur
 * I’m interested in how to make IT based service.
 * 
-<a href="https://www.instagram.com/100_07i2/?hl=ko" target="_blank"><img src="https://img.shields.io/badge/뱃지레이블-배경색?style=뱃지모양&logo=로고&logoColor=로고색상"/>ㅑㅜ100_07i2</a>
-<a href="https://www.instagram.com/100_07i2/?hl=ko" target="_blank">![Instagram](https://img.shields.io/badge/"100_07i2"-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white)</a>
+
+
+<a href="https://www.instagram.com/100_07i2/?hl=ko" target="_blank">![Instagram](https://img.shields.io/badge/100\_07i2-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white)</a>
 
 <br/>
 <br/>
