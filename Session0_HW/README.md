@@ -1,7 +1,7 @@
 # 💻 멋사 10기 백민기🦁 
 <br/>
 
-![header](https://capsule-render.vercel.app/api?type=wave&color=99A1FF&height=300&section=header&text=Introduce&fontSize=90&fontColor=#000000)
+![header](https://capsule-render.vercel.app/api?type=wave&color=767AA0&height=300&section=header&text=Introduce&fontSize=90&fontColor=#000000)
 
 > ### I'm
 * 고려대학교 국어국문학과/SW벤처 융합전공 17학번 백민기
