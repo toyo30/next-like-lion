@@ -12,8 +12,13 @@
 * 고려대학교 국어국문학과/SW벤처 융합전공 17학번 백민기
 * Leveling up for Developer and Entrepreneur
 * I’m interested in how to make IT based service.
-README.md에 아래 코드를 추가한다.
-<a href="버튼을 눌렀을 때 이동할 링크" target="_blank"><img src="https://img.shields.io/badge/뱃지레이블-배경색?style=뱃지모양&logo=로고&logoColor=로고색상"/></a>
+* 
+<a href="https://www.instagram.com/100_07i2/?hl=ko" target="_blank"><img src="https://img.shields.io/badge/뱃지레이블-배경색?style=뱃지모양&logo=로고&logoColor=로고색상"/>ㅑㅜ100_07i2</a>
+<a href="https://www.instagram.com/본인인스타아이디/">
+    <img 
+        src="http://img.shields.io/badge/-쓰고싶은텍스트-배경색(ex.222222)?style=flat&logo=아이콘명(ex.Instagram)&link=https://www.instagram.com/본인인스타아이디/"
+        style="height : auto; margin-left : 10px; margin-right : 10px;"/>
+</a>
 <br/>
 <br/>
 
