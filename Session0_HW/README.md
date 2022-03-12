@@ -4,11 +4,13 @@
 * 고려대학교 국어국문학과/SW벤처 융합전공 17학번 백민기
 * Leveling up for Developer and Entrepreneur
 * I’m interested in how to make IT based service.
+<br/>
   
 
 > ### About My GitHub
 * #### stats
 [![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=toyo30)](https://github.com/toyo30/github-readme-stats)
+<br/>
 
 * #### most used languages
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=toyo30&layout=compact)](https://github.com/toyo30/github-readme-stats)
