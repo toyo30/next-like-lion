@@ -1,11 +1,12 @@
 # 💻 멋사 10기 백민기🦁 
-
+<br/>
+<br/>
 > ### I'm
 * 고려대학교 국어국문학과/SW벤처 융합전공 17학번 백민기
 * Leveling up for Developer and Entrepreneur
 * I’m interested in how to make IT based service.
 <br/>
-  
+<br/>
 
 > ### About My GitHub
 * #### stats
@@ -14,11 +15,13 @@
 
 * #### most used languages
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=toyo30&layout=compact)](https://github.com/toyo30/github-readme-stats)
-
+<br/>
+<br/>
 
 > ### About algorithm(feat.백준)
 [![Solved.ac프로필](http://mazassumnida.wtf/api/v2/generate_badge?boj=toyo30)](https://solved.ac/toyo30)
-
+<br/>
+<br/>
 
 > ### Otherlink
 dev blog, daily blog, 인스타, soundcloud
