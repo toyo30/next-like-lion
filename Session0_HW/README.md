@@ -8,6 +8,15 @@
 <br/>
 <br/>
 
+> ### Skills
+* 고려대학교 국어국문학과/SW벤처 융합전공 17학번 백민기
+* Leveling up for Developer and Entrepreneur
+* I’m interested in how to make IT based service.
+README.md에 아래 코드를 추가한다.
+<a href="버튼을 눌렀을 때 이동할 링크" target="_blank"><img src="https://img.shields.io/badge/뱃지레이블-배경색?style=뱃지모양&logo=로고&logoColor=로고색상"/></a>
+<br/>
+<br/>
+
 > ### About My GitHub
 * #### stats
 [![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=toyo30)](https://github.com/toyo30/github-readme-stats)
