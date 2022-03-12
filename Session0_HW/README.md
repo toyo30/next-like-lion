@@ -1,6 +1,8 @@
 # 💻 멋사 10기 백민기🦁 
 <br/>
 
+![header](https://capsule-render.vercel.app/api?type=wave&color=auto&height=300&section=header&text=capsule%20render&fontSize=90)
+
 > ### I'm
 * 고려대학교 국어국문학과/SW벤처 융합전공 17학번 백민기
 * Leveling up for Developer and Entrepreneur
