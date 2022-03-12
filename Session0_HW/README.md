@@ -16,6 +16,7 @@
 * I’m interested in how to make IT based service.
 * 
 <a href="https://www.instagram.com/100_07i2/?hl=ko" target="_blank"><img src="https://img.shields.io/badge/뱃지레이블-배경색?style=뱃지모양&logo=로고&logoColor=로고색상"/>ㅑㅜ100_07i2</a>
+![Instagram](https://img.shields.io/badge/100_07i2-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white)
 <a href="https://www.instagram.com/본인인스타아이디/">
     <img 
         src="http://img.shields.io/badge/-쓰고싶은텍스트-배경색(ex.222222)?style=flat&logo=아이콘명(ex.Instagram)&link=https://www.instagram.com/본인인스타아이디/"
