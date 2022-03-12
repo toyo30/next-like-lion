@@ -21,7 +21,7 @@
 * link: https://ember-novel-440.notion.site/eca6948254d44a3da01194fd5af6a0b5
 <br/>
 <br/>
-> ### ✏️ I want to learn
+> ### I want to learn
 
 ![Django](https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white) ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white) ![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
 <br/>
@@ -48,61 +48,3 @@
 
 <br/>
 <br/>
-
-This is an H1
-
-This is an H2
-
-
-
-
-#### This is a H4
-##### This is a H5
-###### This is a H6
-
-
-
-
-
-
-
-
-
-
-> This is a first blockqute.
->	> This is a second blockqute.
->	>	> This is a third blockqute.
-
-
-1. 첫번째
-2. 두번째
-3. 세번째
-
-
-* 빨강
-  * 녹색
-    * 파랑
-
-+ 빨강
-  + 녹색
-    + 파랑
-
-- 빨강
-  - 녹색
-    - 파랑
-
-
-* 1단계
-  - 2단계
-    + 3단계
-      + 4단계
-
-This is a normal paragraph:
-
-    This is a code block.
-    
-end code block.
-
-
-
-
