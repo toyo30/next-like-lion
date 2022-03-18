@@ -1,1 +1,380 @@
 @charset 'utf-8';
+
+/* 인스타그램 진짜 홈페이지에서 레이아웃을 어떻게 잡았는지 보기 */
+
+html {
+    font-family: 'Noto sans KR', sans-serif;
+    font-size: 14px;
+}
+
+
+body {
+    overflow-x: hidden;
+    letter-spacing: -0.05em;   
+    background:rgba(60, 60, 67, 0.18);
+}
+
+
+.container {
+    max-width: 375px;
+    margin: 0 auto;
+    overflow-x: hidden;
+    /* padding: 0 20px; */
+    background: #fafafa;
+    
+}
+
+header, main > section > div, footer{
+    padding: 0 20px;
+}
+
+
+/* head-wrap */
+
+.btn-back {
+    flex: 1;
+    width: 24px;
+    height: 24px;
+    background: url('./img/btn-back.png') no-repeat;
+    background-size: contain;
+    cursor: pointer;
+}
+
+.btn-bell {
+    width: 24px;
+    height: 24px;
+    background: url('./img/btn-bell.png') no-repeat;
+    background-size: contain;
+    cursor: pointer;
+}
+
+.btn-more {
+    width: 24px;
+    height: 24px;
+    background: url('./img/btn-more.png') no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.head-box {
+    display: -webkit-box;   /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
+    -webkit-align-items: center;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.btn-box {
+    flex: 1;
+    display: -webkit-box;   /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
+    justify-content: right;
+}
+
+.main-id {
+    font-size: 18px;
+}
+
+
+/* profile-box */
+
+.profile-area {
+    display: -webkit-box;   /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
+    -webkit-align-items: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.prf-img-box {
+    flex: 1;
+    /* width: 96px;
+    height: 96px; */
+    
+    /* overflow: hidden; */
+}
+
+.prf-img-box img {
+    width: 100%;
+    min-height: 100%;
+    border-radius: 90px;
+}
+
+
+.prf-info-box {
+    flex: 3;
+    display: -webkit-box;   /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
+    -webkit-justify-content: center;
+    justify-content: right;
+    text-align: center;
+}
+
+.prf-info-box div {
+    padding: 0 5px;
+}
+
+.prf-num {
+    font-size: 1.14rem;
+    font-weight: 600;
+}
+
+.prf-text {
+    font-size: 0.93rem;
+    font-weight: 400;
+}
+
+.prf-info-box div {
+    margin-left: 34px;
+}
+
+.prf-info-box .prf-post {
+    margin-left: 0;
+}
+
+.prf-following {
+    margin-right: 15px;
+}
+
+
+
+/* intro-area */
+
+
+.intro-text {
+    width: 100%;
+    height: 50px;
+}
+
+
+.intro-text p {
+    font-size: 0.86rem;
+    font-weight: 600;
+}
+
+
+
+
+/* contact-area */
+
+.contact-area {
+    margin-bottom: 15px;
+}
+
+.contact-content {
+    display: -webkit-box;   /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+}
+
+.ctc-follow, .ctc-mesg {
+    flex: 5;
+}
+
+.ctc-follow {
+    border: 2px solid #C7C7CC;
+    border-radius: 6px;
+    padding: 8px 0;
+    font-weight: 600;
+    letter-spacing: 0.6px;
+    text-indent: 14px;
+}
+
+.ctc-follow:after {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 10px;
+    background: url(./img/btn-arrow-down.png) no-repeat;
+    background-size: 18px 18px;
+    background-position: center;
+}
+
+.ctc-mesg {
+    border: 2px solid #C7C7CC;
+    border-radius: 6px;
+    padding: 8px 0;
+    font-weight: 600;
+    letter-spacing: 0.6px;
+    margin-left: 4px;
+}
+
+
+.ctc-add {
+    display: block;
+    width: 30px;
+    height: 36px;
+    background: url('./img/btn-add.png') no-repeat;
+    background-size: 24px 24px;
+    background-position: center center;
+    border: 2px solid #C7C7CC;
+    border-radius: 5px;
+    margin-left: 4px;
+    margin-right: 7px;
+}
+
+
+/* hight-area */
+
+.high-area {
+    margin-bottom: 15px;
+}
+
+.high-component {
+    width: 70px;
+    height: 83px;
+}
+
+.high-component img {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/* choose-area */
+
+.choose-area {
+    display: -webkit-box;   /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    border-top: 1px solid rgba(60, 60, 67, 0.18);
+    margin-bottom: 1px;
+    background: #FFFFFF;
+}
+
+.choose-area div {
+    flex: 1;
+}
+
+.choose-img-box {
+    padding: 10px 0;
+    text-align: center;
+}
+
+
+.choose-img-box img {
+    width: 22px;
+    height: 22px;
+}
+
+.choose-compo {
+    position: relative;
+}
+
+
+.indi-bar {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #000000;
+    bottom: 0;
+}
+
+
+
+/* post-compo */
+
+
+.post-area {
+    display: -webkit-box;   /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
+}
+
+
+.post-compo {
+    flex: 1;
+}
+
+.post-compo + .post-compo {
+    margin-left: 1px;
+} 
+
+.post-img-box,
+.post-img-box img {
+    width: 100%;
+    height: 100%;
+}
+
+
+footer {
+    background: #FFFFFF;
+}
+
+.foot-box {
+    /* position: fixed;
+    bottom: 0; */
+    
+}
+
+.foot-area {
+    max-width: 375px;
+    margin: 0 auto;
+    display: -webkit-box;   /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
+    align-items: start;
+    justify-content: space-around;
+    padding: 10px 0;
+}
+
+.foot-area div {
+    width: 20px;
+    height: 20px;
+}
+
+.foot-area div img {
+    width: 100%;
+}
+
+.foot-area > .profile {
+    
+}
+
+.profile > img {
+    border-radius: 20px;
+}
+
+.profile {
+    position: relative;
+}
+
+.add-box {
+    position: absolute;
+    display: block;
+    width: 1px;
+    height: 10px;
+    width: 100%;
+    bottom: -10px;
+    text-align: center;
+}
+
+.add-point {
+    display: inline-block;
+    width: 2px;
+    height: 2px;
+    background: red;
+    border-radius: 1px;
+}

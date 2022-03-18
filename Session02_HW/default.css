@@ -38,11 +38,11 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-img {
+/* img {
 	max-width: 100%;
 	height: auto;
 	border: 0;
-}
+} */
 button {
 	border: 0;
 	background: transparent;
