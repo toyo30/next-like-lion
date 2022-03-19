@@ -3,7 +3,8 @@
 /* 인스타그램 진짜 홈페이지에서 레이아웃을 어떻게 잡았는지 보기 */
 
 html {
-    font-family: 'Noto sans KR', sans-serif;
+    /* font-family: 'Noto sans KR', sans-serif; */
+    font-family: 'Roboto', sans-serif;
     font-size: 14px;
 }
 
@@ -160,7 +161,7 @@ header, main > section > div, footer{
 
 .intro-text p {
     font-size: 0.86rem;
-    font-weight: 600;
+    font-weight: 800;
 }
 
 
@@ -341,8 +342,8 @@ footer {
 }
 
 .foot-area div {
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
 }
 
 .foot-area div img {
@@ -367,7 +368,7 @@ footer {
     width: 1px;
     height: 10px;
     width: 100%;
-    bottom: -10px;
+    bottom: -14px;
     text-align: center;
 }
 
