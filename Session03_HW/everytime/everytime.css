@@ -11,7 +11,7 @@ html {
     color: #FFFFFF;
 }
 
-d
+
 button {
     color: #FFFFFF;
 }
@@ -115,7 +115,6 @@ img {
 .slide-box {
     /* padding: 20px; */
     margin-bottom: 20px;
-    
     border-radius: 15px;
 }
 
@@ -128,9 +127,8 @@ img {
     padding: 20px;
     border: 1px solid #444444;
     border-radius: 15px;
-    margin: 0 5.3333vw;
+    margin: 0 1.43rem;
 }
-
 
 
 .slide-icon-box {
@@ -203,6 +201,10 @@ img {
 
 /* nav-wrap */
 
+.nav-wrap {
+    margin-bottom: 20px;
+}
+
 .nav-area {
     display: -webkit-box;   /* OLD - iOS 6-, Safari 3.1-6, BB7 */
     display: -ms-flexbox;  /* TWEENER - IE 10 */
@@ -212,19 +214,18 @@ img {
     justify-content: space-between;
     padding: 0 20px;
     text-align: center;
-    margin-bottom: 30px;
 }
 
 .nav-compo {
-    width: 45px;
+    width: 3.21rem !important;
 }
 
 .nav-icon-box {
-    width: 40px;
+    width: 2.86rem;
     padding: 5px;
     margin: 0 auto;
     /* box-sizing: border-box; */
-    border-radius: 20px;
+    border-radius: 1.43rem;
     background: #424242;
     margin-bottom: 10px;
 }
@@ -400,3 +401,12 @@ img {
 .foot-box > span.gray {
     color: #424242;
 }
+
+
+
+@media screen and (max-width: 375px){
+    html {
+        font-size: 3.7333vw;
+    }
+}
+
