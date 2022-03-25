@@ -37,6 +37,8 @@ while True:
     
     cycle += 1
     if num == answer:
+        print(type(num))
+        print(type(answer))
         break
 
 print(cycle)

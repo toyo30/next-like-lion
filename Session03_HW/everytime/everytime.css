@@ -11,7 +11,7 @@ html {
     color: #FFFFFF;
 }
 
-
+d
 button {
     color: #FFFFFF;
 }
@@ -21,6 +21,9 @@ img {
     max-width: 100%;
     height: 100%;
 }
+
+
+
 @font-face {
     font-family: 'Material Icons';
     font-style: normal;
@@ -106,24 +109,29 @@ img {
 /* main */
 
 .slide-wrap {
-    padding: 20px;
+    /* padding: 20px; */
 }
 
 .slide-box {
     width: 300px;
     margin: 0 auto;
-    padding: 20px;
+    /* padding: 20px; */
     margin-bottom: 20px;
-    border: 1px solid #444444;
+    
     border-radius: 15px;
 }
 
 .slide-component {
+    width: 300px !important;
+    margin: 0 auto;
     display: -webkit-box;   /* OLD - iOS 6-, Safari 3.1-6, BB7 */
     display: -ms-flexbox;  /* TWEENER - IE 10 */
     display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
     display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
     padding: 20px;
+    border: 1px solid #444444;
+    border-radius: 15px;
+    margin-right: 35px;
 }
 
 
@@ -255,7 +263,7 @@ img {
 
 /* adv-box */
 
-.adv-box {
+.adv-wrap {
     padding: 0 10px;
     margin-bottom: 5px;
 }
@@ -264,4 +272,117 @@ img {
     width: 100%;
     border-radius: 20px;
     overflow: hidden;
+}
+
+
+
+/* board-box */
+
+.board-wrap {
+    padding: 0 10px;
+}
+
+.board-box {
+    padding: 20px 20px 5px 20px;
+    border: 1px solid #444444;
+    border-radius: 20px;
+}
+
+.board-head {
+    display: -webkit-box;   /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.board-title {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.board-more {
+    display: -webkit-box;   /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
+    align-items: center;
+    color: #b96060;
+}
+
+.board-more > .material-icons.mor {
+    font-size: 14px;
+    color: #b96060;
+}
+
+
+.board-secret {
+    display: -webkit-box;   /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-align-items: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.board-subtitle {
+    width: 100%;
+    margin-right: 20px;
+    word-break: keep-all;
+    font-weight: 500;
+}
+
+.board-subtext {
+    display: inline-block;
+    font-size: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-right: 10px;
+}
+
+.board-secret > div {
+    display: inline-block;
+    width: 20px;
+    height: 11px;
+    font-size: 10px;
+    border-radius: 2px;
+    color:#000000;
+    background: #da6262;
+    font-weight: bold;
+}
+
+
+
+.foot-box {
+    display: -webkit-box;   /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
+    justify-content: space-around;
+    -webkit-align-items: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    max-width: 375px;
+    margin: 0 auto;
+    height: 50px;
+    bottom: 0px;
+    background: #000000;
+    border-top: 1px solid #444444;
+}
+
+.foot-box > span {
+    flex: 1;
+    text-align: center;
+    font-size: 30px;
+}
+
+.foot-box > span.gray {
+    color: #424242;
 }
