@@ -24,45 +24,38 @@ img {
 
 
 
-@font-face {
+/* @font-face {
     font-family: 'Material Icons';
     font-style: normal;
     font-weight: 400;
-    src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
+    src: url(https://example.com/MaterialIcons-Regular.eot); 
     src: local('Material Icons'),
       local('MaterialIcons-Regular'),
       url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
       url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
       url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
-  }
+  } */
 
 
-
+/* 
   .material-icons {
     font-family: 'Material Icons';
     font-weight: normal;
     font-style: normal;
-    font-size: 24px;  /* Preferred icon size */
+    font-size: 24px;  
     display: inline-block;
     line-height: 1;
     text-transform: none;
     letter-spacing: normal;
     word-wrap: normal;
     white-space: nowrap;
-    direction: ltr;
-  
-    /* Support for all WebKit browsers. */
+    direction: ltr;  
     -webkit-font-smoothing: antialiased;
-    /* Support for Safari and Chrome. */
     text-rendering: optimizeLegibility;
-  
-    /* Support for Firefox. */
     -moz-osx-font-smoothing: grayscale;
-  
-    /* Support for IE. */
     font-feature-settings: 'liga';
     color: #FFFFFF;    
-  }
+  } */
 
 
 
@@ -119,7 +112,7 @@ img {
 }
 
 .slide-component {
-    width: 335px !important;
+    width: 23.93rem !important;
     display: -webkit-box;   /* OLD - iOS 6-, Safari 3.1-6, BB7 */
     display: -ms-flexbox;  /* TWEENER - IE 10 */
     display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
@@ -205,6 +198,10 @@ img {
     margin-bottom: 20px;
 }
 
+.nav-box {
+    overflow: hidden;
+}
+
 .nav-area {
     display: -webkit-box;   /* OLD - iOS 6-, Safari 3.1-6, BB7 */
     display: -ms-flexbox;  /* TWEENER - IE 10 */
@@ -218,11 +215,24 @@ img {
 
 .nav-compo {
     width: 3.21rem !important;
+    margin-right: 2rem;
+}
+
+.nav-compo:last-child {
+    margin-right: 2.2rem;
 }
 
 .nav-icon-box {
+    display: -webkit-box;   /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
     width: 2.86rem;
-    padding: 5px;
+    height: 2.86rem;
     margin: 0 auto;
     /* box-sizing: border-box; */
     border-radius: 1.43rem;
@@ -232,7 +242,7 @@ img {
 
 
 .nav-icon-box span {
-    font-size: 24px;
+    font-size: 1.71rem;
 }
 
 .nav-compo .nav-text {

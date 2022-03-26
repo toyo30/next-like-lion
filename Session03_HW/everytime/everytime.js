@@ -1,9 +1,30 @@
-var swiper = new Swiper(".mySwiper", {
+var navSwiper = null;
 
-  });
-
-var swiper = new Swiper(".navSwiper", {
-  slidesPerView: 5,
-  spaceBetween: 12,
+var navSwiper = new Swiper(".navSwiper", {
+  slidesPerView: 'auto',
   freeMode: true,
+  
 });
+
+var swiper = new Swiper(".mySwiper", {
+});
+
+
+
+window.addEventListener('resize', () => {
+  // navSwiper = null;
+  // swiper = null;
+  if (navSwiper == null || swiper == null) {
+
+    navSwiper = new Swiper(".navSwiper", {
+      slidesPerView: 'auto',
+      freeMode: true,
+    
+    });
+
+    swiper = new Swiper(".mySwiper", {
+    });
+  }
+});
+
+
