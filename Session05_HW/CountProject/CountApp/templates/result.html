@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'result.css' %}"></link>
+</head>
+<body>
+    <div id="wrap">
+        <h1>글자수 세기</h1>
+        <div class="form-box">
+            <div class="text-count">
+                <p>공백포함: <span>총 <strong class="total-len">{{total_len}}</strong>자</span></p>
+                <span class="bar"></span>
+                <p>공백제외: <span>총 <strong class="no-blank-len">{{no_blank_len}}</strong>자</span></p>
+                <span class="bar"></span>
+                <p>글자수: <span>총 <strong class="no-blank-len">{{count_word_len}}</strong>자</span></p>
+            </div>
+
+            <div class="form-area" >
+                <div class="text-area">
+                    <textarea id="text-box" name="text" cols="100%" rows="10">{{text}}</textarea>
+                </div>
+                    <br/>
+                <div class="btn-box">
+                    <input class="btn-area" type="submit" value="글자수 결과" />
+                    <div onclick="location='/count'">다시하기</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

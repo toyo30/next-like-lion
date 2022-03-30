@@ -3,3 +3,8 @@
 *.Pipfile
 *.Pipfile.lock
 __pycache__/
+
+
+
+/Session05_HW/Pipfile.lock
+/Session05_HW/Pipfile

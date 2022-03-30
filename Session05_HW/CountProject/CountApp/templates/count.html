@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>count</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'count.css' %}"></link>
+</head>
+<body>
+    <div id="wrap">
+        <h1>글자수 세기</h1>
+        <div class="form-box">
+            <div class="text-count">
+                <p>공백포함: <span>총 <strong class="total-len">0</strong>자</span></p>
+                <span class="bar"></span>
+                <p>공백제외: <span>총 <strong class="no-blank-len">0</strong>자</span></p>
+            </div>
+
+            <form class="form-area" action="{% url 'result' %}" method="post">{% csrf_token %}
+                <div class="text-area">
+                    <textarea id="text-box" name="text" cols="100%" rows="10"></textarea>
+                </div>
+                    <br/>
+                <div class="btn-box">
+                    <input class="btn-area" type="submit" value="글자수 보기" />
+                    <div onclick="location='/count'">다시하기</div>
+                </div>
+            </form>
+        </div>
+    </div>
+<script>
+
+
+let textBox = document.querySelector('#text-box');   
+let totalLen = document.querySelector('.total-len');
+let noTotalLen = document.querySelector('.no-blank-len');
+
+
+function counter(){
+    let textBoxValue = textBox.value;
+    let countText = textBoxValue.length;
+    let countBlank = textBoxValue.replaceAll(" ","").length;
+
+
+    totalLen.innerHTML = countText;
+    noTotalLen.innerHTML = countBlank;
+ }
+
+
+textBox.addEventListener("keyup", (e) => {
+     counter();
+
+});
+
+</script>
+</body>
+</html>
