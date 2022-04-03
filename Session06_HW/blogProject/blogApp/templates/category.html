@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'common.css' %}"></link>
+</head>
+<body>
+    <div id="wrap">
+        <div class="container">
+            <a href="{% url 'list'%}"> 
+                <h2 class="title">전체 게시글로 가기</h2>
+            </a>
+            <ul>
+                <div>
+                    <p class="sub-title">{{article_category}}<span>({{length}})</span></p>
+                </div>
+                <div class="category">            
+                    <a href="{% url 'category' hobby %}">
+                        <p>취미</p>
+                    </a>
+                    
+                    <a href="{% url 'category' food %}">
+                        <p>음식</p>
+                    </a>
+                    
+                    <a href="{% url 'category' programming %}">
+                        <p>프로그래밍</p>
+                    </a>
+                </div>
+                {% comment %} 반복문인가요? 설마 인덱스도 쓸 수 있니?{% endcomment %}
+                {% for article in articles %}
+                <a href="{% url 'detail' article.id %}">
+                    <li class="item-box">
+                        <p class="item-title">{{article.title}}</p> 
+                        <p class="item-content">{{article.content}}</p>
+                        <div>
+                            <span class="item-date">date: {{article.date}}</span> 
+                            <span class="item-category">category: {{article.category}}</span> 
+                        </div>
+                    </li>
+                </a>
+                {% endfor %}
+            </ul>
+            <a class="go-write" href="{% url 'new' %}">
+                <button class="back-list">
+                    글 쓰러 가기
+                </button>
+            </a>
+        </div>
+    </div>   
+</body>
+</html>

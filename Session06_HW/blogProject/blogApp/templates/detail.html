@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'common.css' %}"></link>
+</head>
+<body>
+    <div id="wrap">
+        <div class="container">
+            <h2 class="title">글 상세 페이지</h2>
+            <div>
+                <p class="sub-title">카테고리 {{article.category}}</p>
+            </div>
+            <div class="content-box">
+                <p class="item-title">{{article.title}}</p>
+            </div>
+            <div class="content-box">
+                <p class="item-content">내용 {{article.content}}</p>
+            </div>
+            <div class="content-box">
+                <p class="item-date">시간 {{article.date}}</p>
+            </div>
+            <a href="{% url 'list' %}">
+                <button class="back-list">
+                    전체 목록으로 돌아가기
+                </button>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

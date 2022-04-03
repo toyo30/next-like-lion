@@ -1,0 +1,197 @@
+@charset 'utf-8';
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+ol, ul, li {
+	list-style: none;
+}
+
+
+a {
+    text-decoration: none;
+    color: #333333;
+}
+
+#wrap {
+    width: 650px;
+    margin: 0 auto;
+    padding-top: 100px;
+}
+
+
+
+.title {
+    height: 50px;
+    border-bottom: 1px solid #4a4a4a;
+    margin-bottom: 20px;
+    
+}
+
+.sub-title {
+    height: 30px;
+    color: #333333;
+
+}
+
+
+.category {
+    display: flex;
+    color: #dad8d8;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    font-weight: 100;
+}
+
+.item-box {
+    padding: 20px 0;
+    border-bottom: 1px solid #dad8d8;
+}
+
+.item-title {
+    font-size: 30px;
+    margin-bottom: 5px;
+    font-weight: 400;
+}
+
+.item-content {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+
+.item-date, .item-category {
+    font-size: 14px;
+    font-weight: 100;
+}
+
+.content-box {
+    padding: 20px 0;
+}
+
+.item-date {
+    color: lightblue;
+    font-weight: 500;
+    margin-right: 10px;
+}
+
+
+.go-write {
+    display: block;
+    margin-top: 50px;
+    height: 50px;
+}
+
+
+
+.text-count strong {
+    color: #39f;
+}
+
+
+.text-area {
+    border: 1px solid #e3e3e3;
+}
+
+textarea {
+    overflow: auto;
+    vertical-align: top;
+    resize: vertical;
+}
+
+#text-box {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    border: none;
+    box-sizing: border-box;
+    
+}
+
+.btn-area {
+    background: lightblue;
+    border: 1px solid;
+}
+
+.btn-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.btn-box input {
+    width: 300px;
+    height: 70px;
+    font-size: 18px;
+    font-weight: normal;
+    margin-right: 5px;
+    background: #39f;
+    color: #FFFFFF;
+}
+
+.back-list {
+    display: block;
+    background: rgb(168, 168, 168);
+    color: #FFFFFF;
+    width: 200px;
+    height: 50px;
+    border: none;
+}
+
+.title-box {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 30px;
+}
+
+.title-box input {
+    width: 100%;
+    height: 50px;
+    border: none;
+    font-size: 30px;
+    padding: 30px;
+    box-sizing: border-box;
+    border: 1px solid #e3e3e3;
+}
+
+
+.write-box {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 50px;
+}
+
+.write-box textarea {
+    width: 100%;
+    height: 100%;
+}
+
+.back-list.com {
+    margin-right: 10px;
+    font-size: 13px;
+    background: lightblue;
+}
+
+.back-list.di {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    font-size: 13px;
+}

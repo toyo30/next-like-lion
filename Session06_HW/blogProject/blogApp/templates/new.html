@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>글 작성</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'common.css' %}"></link>
+</head>
+<body>
+    <div id="wrap">
+        <div class="container">
+            <h2 class="title">글 작성</h2>
+            {% comment %} 엑션과 매서드 엑션/ 공백이면 자기자신에게 요청을 보낸다.  {% endcomment %}
+            {% comment %} 생성하는 행위면 post 패서드를 보냄. {% endcomment %}
+            <form action="/new" method="post">{% csrf_token %}
+                <div class="sub-title">
+                    <select name="category" id="category">
+                        <option value="null" selected>카테고리를 선택하세요</option>
+                        <option value="hobby">취미</option>
+                        <option value="food">음식</option>
+                        <option value="programming">프로그래밍</option>
+                    </select>
+                </div>
+                <div>
+                    <div class="sub-title">글 제목</div>
+                    <div class="title-box">
+                        <input type="text" name="title"/>
+                    </div>
+                    
+                </div>
+                <div>
+                    <div class="sub-title">글 내용</div>
+                    <div class="write-box">
+                        <textarea class="text-area" name="content" cols="30" rows="10"></textarea>
+                    </div>
+                </div>
+                <div class="btn-box">
+                    <button class="back-list com" type="submit">작성 완료</button>
+                    <div class="back-list di" onclick="location='/list'">게시글로 가기</div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
