@@ -38,8 +38,7 @@ def list(request):
         'length': length, 
         'hobby': 'hobby', 
         'food': 'food', 
-        'programming': 
-        'programming', 
+        'programming': 'programming', 
         'hobby_length': hobby_length,
         'food_length': food_length,
         'programming_length': programming_length,
