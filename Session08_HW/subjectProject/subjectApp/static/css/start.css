@@ -1,0 +1,16 @@
+@charset 'utf-8';
+
+.masthead {
+    padding-top: calc(6rem + 104px);
+    padding-bottom: 13rem;
+}
+
+
+
+.normal-link {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.normal-link:hover, .normal-link:active {text-decoration: none; color:#fff;}
+

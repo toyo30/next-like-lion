@@ -1,14 +1,20 @@
+{% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
-    {% include '/head.html' %}
-    <title>Add 전공</title>
+    {% include './head.html' %}
+    <title>전공 추가</title>
 </head>
 <body>
     <h2>전공 추가</h2>
     <div>
         <form method="post">{% csrf_token %}
             {{ form.as_p }}
+            
+                {% comment %} <label for="add-major">name</label>
+                <input type="text" name="add-major" id="add-major" placeholder="전공을 입력하세요."> {% endcomment %}
+        
+
             <button>등록</button>
             
         </form>

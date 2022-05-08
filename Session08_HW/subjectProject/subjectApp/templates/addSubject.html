@@ -1,17 +1,21 @@
+{% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
-    {% include '/head.html' %}
-    <title>Add 과목</title>
+    {% include './head.html' %}
+    <title>과목 추가</title>
 </head>
 <body>
     <h2>과목 추가</h2>
-    <div class="subject">
-        <form method="post">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <button>등록</button>
-        </form>
+    <div>
+    <form action="/addSubject/" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        
+    
+        <button>등록</button>
+        
+    </form>
     </div>
 </body>
 </html>
