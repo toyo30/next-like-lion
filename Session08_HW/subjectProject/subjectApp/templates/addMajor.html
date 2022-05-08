@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include '/head.html' %}
+    <title>Add 전공</title>
+</head>
+<body>
+    <h2>전공 추가</h2>
+    <div>
+        <form method="post">{% csrf_token %}
+            {{ form.as_p }}
+            <button>등록</button>
+            
+        </form>
+    </div>
+</body>
+</html>
