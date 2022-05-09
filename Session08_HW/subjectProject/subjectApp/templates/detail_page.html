@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    {% include './head.html' %}
+  <title>디테일 전공</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-1"></div>
+      <div class="col-10">
+        <h4>고려대학교 전공 목록</h4>
+        <ul class="list-group">
+            {% for subject in subject_list %}
+            <h4>{{ subject.major.name }}</h4>
+            <li class="list-group-item" aria-current="true">
+              <span>
+                {{ subject.subject_name }} | {{ subject.major }} | {{ subject.prof_name }} | {{ subject.memo }} |
+                <a href="{% url 'editSubject' subject.pk %}" type="button" class="btn-sm btn-secondary">수정</a>
+                <a href="{% url 'deleteSubject' subject.pk %}" type="button" class="btn-sm btn-secondary">삭제</a>  
+              </span>
+            </li>
+            {% endfor %}
+          </ul>
+      </div>
+      <div class="col-1"></div>
+    </div>
+  </div>
+</body>
+
+</html>

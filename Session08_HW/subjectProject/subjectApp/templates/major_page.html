@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+<head> 
+    {% include './head.html' %}
+    <link rel="stylesheet" href="{% static 'css/start.css' %}">
+    <title>Document</title>
+</head>
+<body id="page-top">
+    {% include './nav.html' %}
+    <section class="page-section" id="contact">
+        <div class="container">
+            <!-- Contact Section Heading-->
+            <a class="a-tag" href="/major_page">
+              <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">고려대학교 전공 목록</h2>
+            </a>
+            <!-- Icon Divider-->
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <!-- Contact Section Form-->
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-xl-7">
+                  <ol class="list-group list-group-numbered">
+                    {% for major in major_list %}
+                    <li class="list-group-item">
+                      <a href="/major_page/{{ major }}">
+                        {{ major.name }} | <span><a href="{% url 'editMajor' major.pk %}">수정</a></span><span><a href="{% url 'deleteMajor' major.pk %}">삭제</a></span>
+                      </a>
+                    </li>
+                    {% endfor %}
+                  </ol>
+                </div>
+                <div class="col-10">
+                  <ul class="list-group">
+                    <h4>{{ major.name }}</h4>
+                      {% for subject in subject_list %}
+                      <li class="list-group-item" aria-current="true">
+                        <span>
+                          {{ subject.subject_name }} | {{ subject.major }} | {{ subject.prof_name }} | {{ subject.memo }} |
+                          <a href="{% url 'editSubject' subject.pk %}" type="button" class="btn-sm btn-secondary">수정</a>
+                          <a href="{% url 'deleteSubject' subject.pk %}" type="button" class="btn-sm btn-secondary">삭제</a>  
+                        </span>
+                      </li>
+                      {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

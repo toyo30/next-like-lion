@@ -14,3 +14,30 @@
 
 .normal-link:hover, .normal-link:active {text-decoration: none; color:#fff;}
 
+
+
+
+.page-section {
+    padding: 9rem 0;
+}
+
+
+.add.major, .add.subject, .edit.major, .delete.major {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+
+
+.button.point {
+    padding: 1rem 1.75rem;
+    font-size: 1.25rem;
+    color: #fff;
+    background-color: #760023;
+    border-color: #760023;
+    border: 0.125rem solid transparent;
+}
+
+.a-tag {
+    text-decoration: none !important;
+}

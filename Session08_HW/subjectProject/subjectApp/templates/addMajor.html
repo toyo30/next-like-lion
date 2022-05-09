@@ -3,21 +3,33 @@
 <html lang="ko">
 <head>
     {% include './head.html' %}
+    <link rel="stylesheet" href="{% static 'css/start.css' %}">
     <title>전공 추가</title>
 </head>
-<body>
-    <h2>전공 추가</h2>
-    <div>
-        <form method="post">{% csrf_token %}
-            {{ form.as_p }}
-            
-                {% comment %} <label for="add-major">name</label>
-                <input type="text" name="add-major" id="add-major" placeholder="전공을 입력하세요."> {% endcomment %}
-        
-
-            <button>등록</button>
-            
-        </form>
-    </div>
+<body id="page-top">
+    <!-- Contact Section-->
+    {% include './nav.html' %}
+    <section class="page-section" id="contact">
+        <div class="container">
+            <!-- Contact Section Heading-->
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">전공 추가</h2>
+            <!-- Icon Divider-->
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <!-- Contact Section Form-->
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-xl-7">
+                    <form action="/addMajor/" method="post">
+                            {% csrf_token %}
+                            {{ form.as_p }}
+                        <button class="button point">등록</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 </html>

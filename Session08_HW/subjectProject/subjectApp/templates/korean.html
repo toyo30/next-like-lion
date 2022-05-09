@@ -1,11 +1,36 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="ko">
-<head>
+<head> 
     {% include './head.html' %}
+    <link rel="stylesheet" href="{% static 'css/start.css' %}">
     <title>Document</title>
 </head>
-<body>
+<body id="page-top">
+    {% include './nav.html' %}
+    <section class="page-section" id="contact">
+        <div class="container">
+            <!-- Contact Section Heading-->
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">전공 추가</h2>
+            <!-- Icon Divider-->
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <!-- Contact Section Form-->
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-xl-7">
+                    <form action="/addMajor/" method="post">
+                            {% csrf_token %}
+                            {{ form.as_p }}
+                                
+                        <button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit">등록</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
     <h2>국어국문학과 과목</h2>
 
     <ol>
