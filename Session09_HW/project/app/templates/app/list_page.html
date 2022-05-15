@@ -1,0 +1,48 @@
+{% extends 'app/base.html' %}
+{% block title %}
+<title>게시글 목록</title>
+{% endblock %}
+    <div class="blog-masthead">
+        <div class="container">
+          <nav class="blog-nav">
+            <a class="blog-nav-item active" href="#">Home</a>
+            <a class="blog-nav-item" href="#">New features</a>
+            <a class="blog-nav-item" href="#">Press</a>
+            <a class="blog-nav-item" href="#">New hires</a>
+            <a class="blog-nav-item" href="#">About</a>
+          </nav>
+        </div>
+      </div>
+  
+      <div class="container">
+  
+        {% block blogHeader%}
+        <div class="blog-header">
+          <h1 class="blog-title">게시글 목록</h1>
+          <p class="lead blog-description">전체 게시글을 확인해보세요</p>
+        </div>
+        {% endblock blogHeader %}
+        
+  
+
+{% block content %}
+  {% if not posts %}
+  <div class="col-xs-6 col-lg-4">
+    <h2>없어요!</h2>
+    <p>없다니까요! 게시글을 만들어주세요.</p>
+    <p><a class="btn btn-default" href="/create" role="button">게시글만들기 &raquo;</a></p>
+  </div><!--/.col-xs-6.col-lg-4-->
+  
+  {% else %}
+  {% for post in posts %}
+  <div class="col-xs-6 col-lg-4">
+    <h2>{{ post.title }} <span>({{ post.hit }})</span></h2>
+    <p>{{ post.content }}</p>
+    <p><a class="btn btn-default" href="{% url 'detail_page' post.pk %}" role="button">View details &raquo;</a></p>
+  </div><!--/.col-xs-6.col-lg-4-->
+  {% endfor %}
+  {% endif %}
+{% endblock%}              
+ 
+  
+

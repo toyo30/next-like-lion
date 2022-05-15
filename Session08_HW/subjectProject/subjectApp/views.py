@@ -75,6 +75,7 @@ def major_page(request, major_name):
 
 
 def koreanSubjectView(request):
+    computer/?major=english
     subjects = Subject.objects.all()
     koreanMajor = subjects.filter(major_id='1')
     return render(request, 'korean.html', {
