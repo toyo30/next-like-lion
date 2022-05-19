@@ -1,0 +1,41 @@
+{% extends 'app/base.html' %}
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'app/css/blog.css' %}">
+    <script src="{% static 'app/js/ie-emulation-modes-warning.js' %}"></script>
+
+{% block title %}
+<title>상세 페이지</title>
+{% endblock title %}
+    
+
+{% block blogHeader%}
+<div class="blog-header">
+  <h1 class="blog-title">게시글 만들기</h1>
+  <p class="lead blog-description">게시글을 만들어보세요</p>
+</div>
+{% endblock blogHeader %}
+        
+  
+{% block content %}
+  <form action="" method="post">
+    {% csrf_token %}
+    <div class="form-group">
+      <label for="exampleInputPassword1">제목</label>
+      <input type="text" name="title" class="form-control" id="exampleInputPassword1" placeholder="제목을 입력하세요">
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">내용</label>
+      <textarea name="content" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="내용을 입력하세요"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+{% endblock content %}
+                
+  

@@ -1,0 +1,31 @@
+{% extends 'app/base.html' %}
+
+{% block title %}
+<title>게시물 편집</title>
+{% endblock title %}
+    
+
+        {% block blogHeader%}
+        <div class="blog-header">
+          <h1 class="blog-title"></h1>
+          <p class="lead blog-description"></p>
+        </div>
+        {% endblock blogHeader %}
+  
+        {% block content %}
+        <form action="" method="post">
+          {% csrf_token %}
+          <div class="form-group">
+            <label for="exampleInputPassword1">제목</label>
+            <input type="text" name="title" class="form-control" id="exampleInputPassword1" value="{{ post.title }}">
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlTextarea1">내용</label>
+            <textarea name="content" class="form-control" id="exampleFormControlTextarea1" rows="3">{{ post.content }}</textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+        {% endblock content %}
+          
+  

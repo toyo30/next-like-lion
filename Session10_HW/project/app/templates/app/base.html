@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'app/css/blog.css' %}">
+    <script src="{% static 'app/js/ie-emulation-modes-warning.js' %}"></script>
+    {% block title %}
+    {% endblock title %}
+</head>
+<body>
+    <div class="blog-masthead">
+        <div class="container">
+          <nav class="blog-nav">
+            <a class="blog-nav-item {% if url_name == '/' %}active{% endif %}" href="/">list_page</a>
+            <a class="blog-nav-item {% if url_name == 'create' %}active{% endif %}" href="{% url 'create_page' %}">create_page</a>
+            <a class="blog-nav-item {% if url_name == 'detail' %}active{% endif %}" href="{% url 'detail_page' 1 %}">detail_page</a>
+            <a class="blog-nav-item {% if url_name == '/edit' %}active{% endif %}" href="{% url 'edit_page' 1 %}">edit_page</a>
+          </nav>
+        </div>
+      </div>
+  
+      <div class="container">
+  
+        {% block blogHeader%}
+        {% endblock blogHeader %}
+        <div class="row">
+  
+          {% block content %}
+          {% endblock content %}
+  
+        </div><!-- /.row -->
+  
+      </div><!-- /.container -->
+  
+      <footer class="blog-footer">
+        <p>Blog template built for <a href="http://getbootstrap.com">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+        <p>
+          <a href="#">Back to top</a>
+        </p>
+      </footer>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+      <script src="{% static 'app/js/ie10-viewport-bug-workaround.js' %}"></script>
+</body>
+</html>

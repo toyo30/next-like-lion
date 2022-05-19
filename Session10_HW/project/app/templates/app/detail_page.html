@@ -1,0 +1,57 @@
+{% extends 'app/base.html' %}
+{% block title %}
+<title>상세 페이지</title>
+{% endblock title %}
+    
+
+{% block blogHeader%}
+<div class="blog-header">
+  <h1 class="blog-title"></h1>
+  <p class="lead blog-description"></p>
+</div>
+{% endblock blogHeader %}
+        
+  
+    
+          {% block content %}
+          
+          <div class="col-sm-16 blog-main">
+  
+            <div class="blog-post">
+              <h2 class="blog-post-title">{{ post.title }}</h2>
+              <hr>
+              <blockquote>
+                <p>{{ post.content }}</p>
+              </blockquote>
+            </div>
+
+            <form method="POST">
+              {% csrf_token %}
+              <div class="d-flex flex-row add-comment-section mt-4 mb-4 arr-comment">
+                <input type="text" name="content" class="form-control mr-3 form-comment" placeholder="Add comment">
+                <button class="btn btn-primary" type="submit">Comment</button>
+              </div> 
+            </form>
+
+            {% for comment in post.comments.all %}
+            
+            <div class="commented-section mt-2">
+              <div class="comment-text-sm"><span>{{comment.content}}</span><a href="{% url 'delete-comment' post.pk comment.pk %}">삭제</a></div>
+          </div>
+            {% endfor %}
+  
+            <nav>
+              <ul class="pager">
+                <li><a href="/">전체 목록</a></li>
+                <li><a href="{% url 'edit_page' post.pk %}">수정하기</a></li>
+                <li><a href="{% url 'delete' post.pk %}">삭제하기</a></li>
+              </ul>
+            </nav>
+
+            
+  
+          </div><!-- /.blog-main -->
+
+          {% endblock content %}
+
+          
