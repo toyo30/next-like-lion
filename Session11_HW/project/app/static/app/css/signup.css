@@ -1,0 +1,40 @@
+@charset 'utf-8';
+
+.box-point {
+    align-items: center;
+}
+
+.primaryAction {
+    display: inline-block;
+    display: inline;
+    zoom: 1;
+    margin: 0 2px 5px;
+    padding: 0;
+    overflow: hidden;
+    line-height: 0;
+    text-decoration: none;
+    text-transform: none;
+    color: #fff;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    border: 0;
+    font-family: helvetica neue,helvetica,arial,sans-serif;
+    width: 117px;
+        height: 42px;
+        margin: 0 2px 2px;
+        background: rgb(250, 185, 0) url('../../assets/img/kakao-logo.png') no-repeat;
+        background-size: 35px 35px;
+        background-position: 2px 51%;
+}
+
+@media screen and (min-width: 980px){
+    .primaryAction {
+        width: 117px;
+        height: 42px;
+        margin: 0 2px 2px;
+        background: #ff2bb7 url(./img/icon-instagram.png) no-repeat;
+        background-size: 35px 35px;
+        background-position: 2px 51%;
+    }
+}
+

@@ -1,0 +1,42 @@
+{% extends 'app/base.html' %} 
+
+{% block css %} 
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'app/css/detail.css' %}" />
+{% endblock css %} 
+
+
+{% block content %}
+<section id="detail">
+    <div>
+      <div>제목: {{ post.title }}</div>
+      <div>내용: {{ post.content }}</div>
+    </div>
+
+
+    <a href="{% url 'home' %}">홈으로</a>
+    {% if user.is_authenticated and post.author.pk == user.pk %}
+    <a href="{% url 'edit' post.pk %}">수정하기</a>
+    <a href="{% url 'delete' post.pk %}">삭제하기</a>
+    {% endif %}
+
+
+    {% for comment in post.comments.all %}
+      <li>{{ comment.content }}</li>
+    {% if user.is_authenticated and comment.author.pk == user.pk %}
+    <a href="{% url 'delete_comment' post.pk comment.pk %}">댓글삭제</a>
+    {% endif %}
+    {% endfor %}
+
+
+    {% if user.is_authenticated %}
+    <form method="POST">
+      {% csrf_token %}
+      <input type="text" name="content" placeholder="댓글을 입력하세요" />
+      <button type="submit">댓글 쓰기</button>
+    </form>
+    {% endif %}
+
+
+</section>
+{% endblock content %}

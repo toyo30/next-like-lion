@@ -1,0 +1,72 @@
+{% extends 'app/base.html' %} 
+
+{% block css %} 
+{% load static %}
+{% load socialaccount %}{% providers_media_js %}
+<link rel="stylesheet" type="text/css" href="{% static 'app/css/signup.css' %}" />
+{% endblock css %} 
+
+
+{% block content %}
+<style>
+  .primaryAction {
+    display: inline-block;
+    display: inline;
+    zoom: 1;
+    margin: 0 2px 5px;
+    padding: 0;
+    overflow: hidden;
+    line-height: 0;
+    text-decoration: none;
+    text-transform: none;
+    color: #fff;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    border: 0;
+    font-family: helvetica neue,helvetica,arial,sans-serif;
+    width: 117px;
+    height: 42px;
+    margin: 0 2px 2px;
+    background: rgb(250, 185, 0) url('../../assets/img/kakao-logo.png') no-repeat;
+    background-size: 35px 35px;
+    background-position: 2px 51%;
+}
+
+</style>
+
+<section id="login">
+
+  <div class="box">
+    <form method="POST">
+      {% csrf_token %}
+      {% if error %}
+        <p>{{error}}</p>
+      {% endif %}
+      <p>
+        <label for="username">아이디: </label>
+        <input class="form-control" type="text" name="username" placeholder="아이디" />
+      </p>
+      <p>
+        <label for="password">비밀번호: </label>
+        <input class="form-control" type="password" name="password" placeholder="비밀번호" />
+      </p>
+      <div class="box">
+        <button class="button point">로그인</button>
+      </div>
+    </form>
+
+    <div class="box-point">
+      <form class="login" method="POST" action="{% provider_login_url 'kakao' %}">
+        {% csrf_token %} {{ form.as_p}} 
+        
+        {% if redirect_field_value %}
+          <input class="nav-item mx-0 mx-lg-1" type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
+        {% endif %}
+
+        <button class="primaryAction" type="submit">카카오 로그인</button>
+      </form>
+    </div>
+  </div>
+  
+</section>
+{% endblock %} 
