@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./practice.css">
+    <link rel="stylesheet" href="../navigation/navigation.css">
+    <script src="../navigation/navigation.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <nav class="nav"></nav>
+        <div class="menu">
+    </header>
+    <div>
+        <section>
+            <div class="shoppingCartHeader">
+                <p>
+                    장바구니 > <span class="shoppingCartChapter">주문결제</span> > 주문완료
+                </p>
+            </div>
+            <div class="shoppingCartMainBox">
+
+                <div class="deliveryBox">
+                    <p class="deliveryInfoHeader">배송지정보</p>
+                    <div class="deliveryInfo">
+                        <div class="deliveryLabel">
+                            <label for="">연락처</label>
+                        </div>
+                        <div>
+                            <input type="text" class="deliveryInput">
+                        </div>
+                    </div>
+                    <div class="deliveryInfo">
+                        <div class="deliveryLabel">
+                            <label for="">주소</label>
+                        </div>
+                        <div class="address">
+                            <div>
+                                <input type="text" class="deliveryInput">
+                            </div>
+                            <div>
+                                <button class="addressBtn">주소찾기</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="deliveryInfo">
+                        <div class="deliveryLabel">
+                            <label for=""></label>
+                        </div>
+                        <div>
+                            <input type="text" class="deliveryInput">
+                        </div>
+                    </div>
+                    <div class="deliveryInfo">
+                        <div class="deliveryLabel">
+                            <label for=""></label>
+                        </div>
+                        <div>
+                            <input type="text" class="deliveryInput">
+                        </div>
+                    </div>
+                    <div class="deliveryInfo">
+                        <div class="deliveryLabel">
+                            <label for="">요청사항</label>
+                        </div>
+                        <div>
+                            <input type="text" class="deliveryInput">
+                        </div>
+                    </div>
+                </div>
+                <div class="payBox">
+                    <div class="payInfoHeader">
+                        <p>결제정보</p>
+                    </div>
+                    <div class="payInfo">
+                        <div class="info">
+                            <p>상품수</p>
+                            <p><span id="payProductQuantity"></span>개</p>
+                        </div>
+                        <div class="info">
+                            <p>상품금액</p>
+                            <p><span id="payProductPrice"></span>원</p>
+                        </div>
+                        <div class="info">
+                            <p>배송비</p>
+                            <p><span id="payShippingPrice"></span>원</p>
+                        </div>
+                    </div>
+                    <div class="payTotalPricePart">
+                        <p>총 결제금액</p>
+                        <p><span id="payTotalPrice"></span>원</p>
+                    </div>
+                    <div id="buyButton">구매하기</div>
+                </div>
+            </div>
+        </section>
+<!-- Code injected by live-server -->
+<script type="text/javascript">
+   // <![CDATA[  <-- For SVG support
+   if ('WebSocket' in window) {
+      (function () {
+         function refreshCSS() {
+            var sheets = [].slice.call(document.getElementsByTagName("link"));
+            var head = document.getElementsByTagName("head")[0];
+            for (var i = 0; i < sheets.length; ++i) {
+               var elem = sheets[i];
+               var parent = elem.parentElement || head;
+               parent.removeChild(elem);
+               var rel = elem.rel;
+               if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+                  var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+                  elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+               }
+               parent.appendChild(elem);
+            }
+         }
+         var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+         var address = protocol + window.location.host + window.location.pathname + '/ws';
+         var socket = new WebSocket(address);
+         socket.onmessage = function (msg) {
+            if (msg.data == 'reload') window.location.reload();
+            else if (msg.data == 'refreshcss') refreshCSS();
+         };
+         if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+            console.log('Live reload enabled.');
+            sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+         }
+      })();
+   }
+   else {
+      console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+   }
+   // ]]>
+</script></body>
+
+</html>

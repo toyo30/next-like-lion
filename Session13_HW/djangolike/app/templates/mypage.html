@@ -1,0 +1,35 @@
+{% extends 'base.html' %} {% block content %}
+<div>
+  좋아요 누른 글
+  <div>
+    <p>좋아요 누른 글만 표시합시다</p>
+  {% for user_like in user_likes %}
+    <div>
+      <ul>
+        <li>
+          <a href="{% url 'detail' user_like.post.pk %}">{{ user_like.post}}</a>
+        </li>
+      </ul>
+    </div>
+    {% endfor %} 
+  </div>
+</div>
+<div>
+  찜하기 누른 글
+  <div>
+    <p>찜하기 누른 글만 표시합시다</p>
+    {% for user_scrap in user_scraps %}
+    <div>
+      <ul>
+        <li>
+          <a href="{% url 'detail' user_scrap.post.pk %}">{{ user_scrap.post}}</a>
+        </li>
+      </ul>
+    </div>
+    {% endfor %} 
+  </div>
+  {% endblock content %}
+</div>
+
+
+<!-- 총 스크랩된 횟수확인!! -->
