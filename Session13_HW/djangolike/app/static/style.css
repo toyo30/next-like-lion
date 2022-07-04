@@ -1,0 +1,13 @@
+@charset 'utf-8';
+
+.content-box {
+    width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .content-title {
+    font-size: 16px;
+    text-decoration: none;
+    list-style: none;
+    padding: 5px 0;
+  }

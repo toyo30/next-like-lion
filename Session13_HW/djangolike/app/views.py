@@ -39,7 +39,34 @@ def detail(request, post_pk):
         )
         return redirect('detail', post_pk)
 
-    return render(request, 'detail.html', {'post': post})
+    existing_scrap = Scrap.objects.filter(
+        post = Post.objects.get(pk=post_pk),
+        user = request.user
+    )
+
+    existing_like = Like.objects.filter(
+        post = Post.objects.get(pk=post_pk),
+        user = request.user
+    )
+    if existing_like.count() > 0:
+        existing_like_status = 1
+    else:
+        existing_like_status = 0
+
+    existing_scrap = Scrap.objects.filter(
+        post = Post.objects.get(pk=post_pk),
+        user = request.user
+    )
+    if existing_scrap.count() > 0:
+        existing_scrap_status = 1
+    else:
+        existing_scrap_status = 0
+
+    return render(request, 'detail.html', {
+        'post': post,
+        'existing_like': existing_like,
+        'existing_scrap': existing_scrap,
+    })
 
 
 def edit(request, post_pk):
@@ -164,7 +191,7 @@ def like(request):
 
     response = {
         'like_count' : post_likes.count(),
-        # 'like_status': existing_like_status,
+        'like_status': existing_like_status,
     }
     
     return HttpResponse(json.dumps(response))
@@ -188,13 +215,24 @@ def scrap(request):
                 post = Post.objects.get(pk=post_pk),
                 user = request.user
             )
-        
     post_scraps = Scrap.objects.filter(
         post = Post.objects.get(pk=post_pk),
     )
+    
+    existing_scrap = Scrap.objects.filter(
+        post = Post.objects.get(pk=post_pk),
+        user = request.user
+    )
+    
+    if existing_scrap.count() > 0:
+        existing_scrap_status = 1
+    else:
+        existing_scrap_status = 0
+
 
     response = {
-        'scrap_count' : post_scraps.count()
+        'scrap_count' : post_scraps.count(),
+        'scrap_status': existing_scrap_status,
     }
     
     return HttpResponse(json.dumps(response))

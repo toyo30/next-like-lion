@@ -21,7 +21,7 @@
     <button type="submit">댓글 쓰기</button>
   </form>
   <button id="scrap-button">찜하기</button>
-  <input id="scrap-value" type="hidden" value="{{post.scraps.count}}">
+  <input id="scrap-value" type="hidden" value="{{existing_scrap}}">
   {% if user.is_authenticated and post.author.pk == user.pk %}
   <div id="scrap-count">찜하기{{post.scraps.count}}개</div>
   {% endif %}
@@ -30,7 +30,7 @@
   <button id="like-button">좋아요</button>
   {% endif %}
   <div id="like-count">좋아요{{post.likes.count}}개</div>
-  <input id="like-value" type="hidden" value="{{post.scraps.count}}">
+  <input id="like-value" type="hidden" value="{{existing_like}}">
   
 </div>
 
@@ -48,17 +48,15 @@
 
   scrapBtn.onclick = () => {
     scrap();
-
   }
+  
   const scrap = async () => {
     try {
-      console.log('asdff')
       const response = await axios.post('/scrap', {post_pk : "{{post.pk}}"})
       if(scrapCount != null){
         document.getElementById("scrap-count").innerHTML = "찜하기" + response.data.scrap_count + "개";
       }
-      scrapValue.value = response.data.scrap_count;
-      console.log(scrapValue.value);
+      scrapValue.value = response.data.scrap_status;
       changeScrapColor();
     }
     catch (e) {
@@ -87,12 +85,11 @@
     try {
       const response = await axios.post('/like', {post_pk : "{{post.pk}}"})
       document.getElementById("like-count").innerHTML = "좋아요" + response.data.like_count + "개";
-      likeValue.value = response.data.like_count;
+      likeValue.value = response.data.like_status;
       changeLikeColor();
     }
     catch (e) {
       console.error(e);
-      
     }
   }
 
