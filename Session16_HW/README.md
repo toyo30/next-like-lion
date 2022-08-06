@@ -31,9 +31,14 @@
 <br/>
 
 > ### 주요 기술 
-* BackEnd: Django - restful api
-* FrontEnd: React with typescript
-* deploy: aws(배포를 하면 좋겠습니다)
+*~~BackEnd: Django - restful api~~
+<br/>
+*~~FrontEnd: React with typescript~~
+<br/>
+*~~deploy: aws(배포를 하면 좋겠습니다)~~
+<br/>
+*django
+
 
 
 <br/>
