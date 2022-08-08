@@ -1,0 +1,40 @@
+{% extends '../base/base.html' %} {% block css %} {% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/signup.css' %}" />
+{% endblock css %} {% block content %}
+<section id="signup">
+  <form method="POST">
+    {% csrf_token %} {% if error %}
+    <p>{{error}}</p>
+    {% else %}
+    <p>위대한 시인이시여, 당신의 시를 뽐내보세요.</p>
+    {% endif %}
+    <div>
+      <label for="nickname">닉네임을 입력해</label>
+      <p>
+        <input id="nickname" type="text" name="nickname" placeholder="닉네임" />
+      </p>
+    </div>
+    <div>
+      <label for="username">아이디를 입력해</label>
+      <p>
+        <input id="username" type="text" name="username" placeholder="아이디" />
+      </p>
+    </div>
+
+    <div>
+      <label for="password">비밀번호를 입력해</label>
+      <p>
+        <input
+          id="password"
+          type="password"
+          name="password"
+          placeholder="비밀번호"
+        />
+      </p>
+    </div>
+
+    <button>회원가입하기</button>
+  </form>
+</section>
+
+{% endblock %}

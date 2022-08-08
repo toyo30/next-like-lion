@@ -1,0 +1,18 @@
+{% extends '../base/base.html' %} {% comment %} {% block css %} {% load static
+%}<link rel="stylesheet" type="text/css" href="{% static 'home.css' %}" />{%
+endblock css %} {% endcomment %} {% block content %}
+<section id="home">
+  <ul>
+    {% for post in posts %}
+    <li c>
+      <a href="">{{ post.content }}</a>
+      <a href="">{{ post.title }}</a>
+
+      {% if profile.user.first_name != None %}
+      <a href="">{{ post.likes }}</a>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endblock content %}

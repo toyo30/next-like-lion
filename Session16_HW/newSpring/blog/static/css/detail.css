@@ -1,0 +1,14 @@
+section#detail {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 15rem;
+  text-align: center;
+}
+
+.comment__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,16 @@
+{% extends '../base/base.html' %} {% block css %} {% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'home.css' %}" />
+{% endblock css %} 
+{% block content %}
+<section id="home">
+  <h1>고려 大 신춘 문예 개강편</h1></br>
+  <h2>개강에 관한 풋!하고 아~하는 시를 찾습니다.</h2>
+  <button>
+    <a href="{% url 'detail' %}">시 보러 가기</a>
+  </button>
+  <button>
+    <a href="{% url 'new' %}">글 쓰러 가기</a>
+  </button>
+  
+</section>
+{% endblock content %}

@@ -1,0 +1,30 @@
+{% extends '../base/base.html' %} {% block css %} {% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'new.css' %}" />
+{% endblock css %} {% block content %}
+<section id="new">
+  <h1>글쓰기</h1>
+  <form method="POST">
+    {% csrf_token %}
+    <label for="">시</label>
+    <br />
+    <textarea
+      name=""
+      id=""
+      cols="30"
+      rows="10"
+      placeholder="ex)방학이라는 좋은 꿈이었다."
+    ></textarea>
+    <!-- <input
+      type="text"
+      name="content"
+      placeholder="ex)방학이라는 좋은 꿈이었다."
+    /> -->
+    <br />
+    <label for="">제목</label>
+    <br />
+    <input type="text" name="title" placeholder="ex)-개강-" />
+
+    <button type="submit">작성하기</button>
+  </form>
+</section>
+{% endblock content %}
