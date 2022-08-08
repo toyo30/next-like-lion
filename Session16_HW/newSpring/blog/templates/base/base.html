@@ -6,6 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/modal.css' %}"
+    />
     <title>신춘 문예</title>
   </head>
   <body>
@@ -34,6 +39,7 @@
 
             <li class="navbar__menu__item">
               <img
+                class="btn-open-modal"
                 src="https://spring.baemin.com/images/nav-ham@2x.png"
                 alt="메뉴바"
               />
@@ -45,6 +51,63 @@
       <div id="container">
         {% block title %} {% endblock %} {% block content %} {% endblock%}
       </div>
+      <!-- 모달을 강조할 배경 레이어 -->
+      <div class="modal-container">
+        <!-- 배경 위에 얹어지는 실제 모달 컨테이너 -->
+        <div class="modal">
+          <!-- 모달 상단 헤더 -->
+          <div class="modal-header mb-10">
+            <!-- 상단 제목 -->
+            <p class="modal-title font-bold mb-10">고려 대 신춘문예</p>
+            <!-- 닫기 버튼 -->
+            <button class="modal-close">
+              <img src="{% static 'assets/icons/close-x.svg' %}" alt="close" />
+            </button>
+          </div>
+          <!-- 모달 내용 -->
+          <article class="modal-body">
+            회원가입<br />
+            로그인<br />
+            글쓰러가기<br />
+            글보러가기<br />
+            글작성하기<br />
+          </article>
+          <!-- (실습) 오늘 하루 보지 않기 버튼 -->
+          <button class="modal-stop-button text-left text-gray">
+            ✔️오늘 하루 보지 않기
+          </button>
+        </div>
+      </div>
     </div>
+    <script>
+      const $ = (selector) => document.querySelector(selector);
+      const modal = $(".modal-container");
+      const btnOpen = $(".btn-open-modal");
+      const btnClose = $(".modal-close");
+
+      const openModal = () => {
+        modal.classList.add("open");
+        //       const scroll = window.scrollY;
+        //       documnet.body.style.cssText = `
+        //    position: fixed;
+        //    top: -${scroll}px;
+        //    overflow: hidden;
+        //    width: 100%;
+        //    height: auto;
+        //  `;
+        document.body.style.overflow = "hidden";
+        // body.style.overflow = "hidden";
+      };
+
+      const closeModal = () => {
+        modal.classList.remove("open");
+        document.body.style.overflow = "visible";
+      };
+
+      btnOpen.addEventListener("click", openModal);
+      btnClose.addEventListener("click", (event) => {
+        closeModal();
+      });
+    </script>
   </body>
 </html>
