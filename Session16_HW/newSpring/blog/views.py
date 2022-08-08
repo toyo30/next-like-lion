@@ -1,10 +1,12 @@
-from django.shortcuts import render
 from django.contrib.auth.models import User
 from django.shortcuts import render, redirect
 from .models import Post, Comment, Like, Scrap
 from django.contrib.auth.models import User
 from django.contrib import auth
 from django.contrib.auth.decorators import login_required
+from django.views.decorators.csrf import csrf_exempt
+from django.http import HttpResponse
+import json
 # Create your views here.
 
 
@@ -17,17 +19,58 @@ def home(request):
 
 
 def detail(request):
-    # post = Post.objects.get(pk=post_pk)
     posts = Post.objects.all()
 
     if request.method == "POST":
         content = request.POST["content"]
-        # Comment.objects.create(post=post, content=content, author=request.user)
 
         return redirect("detail")
     return render(request, "main/detail.html", {"posts": posts})
 
 
+def detailMore(request, post_pk):
+    post = Post.objects.get(pk=post_pk)
+ 
+    if (request.method == 'POST'):
+        Comment.objects.create(
+            post=post,
+            content=request.POST['content'],
+            author=request.user
+        )
+        return redirect('detailMore', post_pk)
+
+    # existing_scrap = Scrap.objects.filter(
+    #     post = Post.objects.get(pk=post_pk),
+    #     user = request.user
+    # )
+
+    # existing_like = Like.objects.filter(
+    #     post = Post.objects.get(pk=post_pk),
+    #     user = request.user
+    # )
+    # if existing_like.count() > 0:
+    #     existing_like_status = 1
+    # else:
+    #     existing_like_status = 0
+
+    # existing_scrap = Scrap.objects.filter(
+    #     post = Post.objects.get(pk=post_pk),
+    #     user = request.user
+    # )
+    # if existing_scrap.count() > 0:
+    #     existing_scrap_status = 1
+    # else:
+    #     existing_scrap_status = 0
+
+    return render(request, 'main/detailMore.html', {
+        'post': post,
+        # 'existing_like': existing_like,
+        # 'existing_scrap': existing_scrap,
+    })
+def delete_comment(request, post_pk, comment_pk):
+    comment = Comment.objects.get(pk=comment_pk)
+    comment.delete()
+    return redirect("detail", post_pk)
 @login_required(login_url="/registration/login")
 def new(request):
     if request.method == "POST":
@@ -49,7 +92,7 @@ def edit(request, post_pk):
         Post.objects.filter(pk=post_pk).update(title=title, content=content)
         return redirect("detail", post_pk)
 
-    return render(request, "edit.html", {"post": post})
+    return render(request, "main/edit.html", {"post": post})
 
 
 def signup(request):
@@ -97,3 +140,42 @@ def delete(request, post_pk):
     post = Post.objects.get(pk=post_pk)
     post.delete()
     return redirect("home")
+
+
+@csrf_exempt
+def like(request):
+    if request.method == 'POST':
+        request_body = json.loads(request.body)
+        post_pk = request_body["post_pk"]
+
+        existing_like = Like.objects.filter(
+            post = Post.objects.get(pk=post_pk),
+            user = request.user
+        )
+        if existing_like.count() > 0:
+            existing_like.delete()
+        else:
+            Like.objects.create(
+                post = Post.objects.get(pk=post_pk),
+                user = request.user
+            )
+    post_likes = Like.objects.filter(
+        post = Post.objects.get(pk=post_pk),
+    )
+
+    existing_like = Like.objects.filter(
+        post = Post.objects.get(pk=post_pk),
+        user = request.user
+    )
+
+    if existing_like.count() > 0:
+        existing_like_status = 1
+    else:
+        existing_like_status = 0
+
+    response = {
+        'like_count' : post_likes.count(),
+        'like_status': existing_like_status,
+    }
+    
+    return HttpResponse(json.dumps(response))

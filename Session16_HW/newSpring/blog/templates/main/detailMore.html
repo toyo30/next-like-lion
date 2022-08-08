@@ -1,0 +1,59 @@
+{% extends '../base/base.html' %} {% comment %} {% block css %} {% load static
+%}<link rel="stylesheet" type="text/css" href="{% static 'home.css' %}" />{%
+endblock css %} {% endcomment %} {% block content %}
+<section id="home">
+  <ul>
+    <li>
+      <a href="">{{ post.content }}</a>
+      <a href="">{{ post.title }}</a>
+      {% if post.likes.all %}
+      <span id="like-count">좋아요{{ post.likes.count }}개</span>
+      <input id="like-value" type="hidden" value="{{existing_like}}" />
+      {% endif %}
+    </li>
+    {% if user.is_authenticated and post.author.pk == user.pk %}
+    <a href="{% url 'edit' post.pk %}">수정하기</a>
+    <a href="{% url 'delete' post.pk %}">삭제하기</a>
+    {% endif %}
+  </ul>
+  <button id="like-button">좋아요</button>
+  {% if post.comments.all != None%}
+  <ul>
+    {% for comment in post.comments.all %}
+    <li>아이디: {{comment.author}} 댓글: {{comment.content}}</li>
+    {% if user.is_authenticated and comment.author.pk == user.pk %}
+    <a href="{% url 'delete_comment' post.pk comment.pk %}">댓글삭제</a>
+    {% endif %} {% endfor %}
+  </ul>
+
+  {% endif %} {% if user.is_authenticated %}
+  <form method="POST">
+    {% csrf_token %}
+    <input type="text" name="content" placeholder="댓글을 입력하세요" />
+    <button type="submit">댓글 쓰기</button>
+  </form>
+  {% endif %}
+</section>
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+  const likeBtn = document.getElementById("like-button");
+  const likeValue = document.getElementById("like-value");
+  const likeCount = document.getElementById("like-count");
+  console.log(likeBtn);
+  const like = async () => {
+    try {
+      const response = await axios.post("/like", { post_pk: "{{post.pk}}" });
+      likeCount.innerHTML = "좋아요" + response.data.like_count + "개";
+      likeValue.value = response.data.like_status;
+      console.log("좋아요생성");
+    } catch (e) {
+      console.error(e);
+    }
+  };
+  likeBtn.onclick = () => {
+    like();
+  };
+</script>
+
+{% endblock content %}

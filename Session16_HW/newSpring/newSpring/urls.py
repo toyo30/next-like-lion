@@ -21,8 +21,19 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("", views.home, name="home"),
     path("detail/", views.detail, name="detail"),
+    path("detailMore/<int:post_pk>", views.detailMore, name="detailMore"),
     path("new/", views.new, name="new"),
     path('registration/signup', views.signup, name="signup"),
     path("registration/login", views.login, name="login"),
     path("registration/logout", views.logout, name="logout"),
+    path("registration/logout", views.logout, name="logout"),
+    path("edit/<int:post_pk>", views.edit, name="edit"),
+    path("delete/<int:post_pk>", views.delete, name="delete"),
+    path(
+        "delete_comment/<int:post_pk>/<int:comment_pk>",
+        views.delete_comment,
+        name="delete_comment"
+    ),
+    #Like
+    path('like', views.like, name="like"),
 ]

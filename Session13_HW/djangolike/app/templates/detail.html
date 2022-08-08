@@ -13,69 +13,62 @@
   <li>{{ comment.content }}</li>
   {% if user.is_authenticated and comment.author.pk == user.pk %}
   <a href="{% url 'delete_comment' post.pk comment.pk %}">댓글삭제</a>
-  {% endif %} {% endfor %} 
-  {% if user.is_authenticated %}
+  {% endif %} {% endfor %} {% if user.is_authenticated %}
   <form method="POST">
     {% csrf_token %}
     <input type="text" name="content" placeholder="댓글을 입력하세요" />
     <button type="submit">댓글 쓰기</button>
   </form>
   <button id="scrap-button">찜하기</button>
-  <input id="scrap-value" type="hidden" value="{{existing_scrap}}">
+  <input id="scrap-value" type="hidden" value="{{existing_scrap}}" />
   {% if user.is_authenticated and post.author.pk == user.pk %}
   <div id="scrap-count">찜하기{{post.scraps.count}}개</div>
   {% endif %}
-  
 
   <button id="like-button">좋아요</button>
   {% endif %}
   <div id="like-count">좋아요{{post.likes.count}}개</div>
-  <input id="like-value" type="hidden" value="{{existing_like}}">
-  
+  <input id="like-value" type="hidden" value="{{existing_like}}" />
 </div>
-
 
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script>
-  const likeBtn = document.getElementById('like-button');
-  const likeCount = document.getElementById('like-count');
-  const likeValue = document.getElementById('like-value');
+  const likeBtn = document.getElementById("like-button");
+  const likeCount = document.getElementById("like-count");
+  const likeValue = document.getElementById("like-value");
 
-
-  const scrapBtn = document.getElementById('scrap-button');
-  const scrapCount = document.getElementById('scrap-count');
-  const scrapValue = document.getElementById('scrap-value');
+  const scrapBtn = document.getElementById("scrap-button");
+  const scrapCount = document.getElementById("scrap-count");
+  const scrapValue = document.getElementById("scrap-value");
 
   scrapBtn.onclick = () => {
     scrap();
-  }
+  };
 
   const scrap = async () => {
     try {
-      const response = await axios.post('/scrap', {post_pk : "{{post.pk}}"})
-      if(scrapCount != null){
-        document.getElementById("scrap-count").innerHTML = "찜하기" + response.data.scrap_count + "개";
+      const response = await axios.post("/scrap", { post_pk: "{{post.pk}}" });
+      if (scrapCount != null) {
+        document.getElementById("scrap-count").innerHTML =
+          "찜하기" + response.data.scrap_count + "개";
       }
       scrapValue.value = response.data.scrap_status;
       changeScrapColor();
-    }
-    catch (e) {
+    } catch (e) {
       console.error(e);
     }
-  }
+  };
 
-  
   const changeScrapColor = () => {
-    if(parseInt(scrapValue.value) == 0){
-      scrapBtn.style.color="black";
-      scrapBtn.innerHTML = "찜하기"
-    } else if (parseInt(scrapValue.value) > 0){
-      scrapBtn.style.color="blue";
-      scrapBtn.innerHTML = "찜했습니다."
+    if (parseInt(scrapValue.value) == 0) {
+      scrapBtn.style.color = "black";
+      scrapBtn.innerHTML = "찜하기";
+    } else if (parseInt(scrapValue.value) > 0) {
+      scrapBtn.style.color = "blue";
+      scrapBtn.innerHTML = "찜했습니다.";
     }
   };
   changeScrapColor();
-
 
   likeBtn.onclick = () => {
     like();
@@ -83,28 +76,24 @@
 
   const like = async () => {
     try {
-      const response = await axios.post('/like', {post_pk : "{{post.pk}}"})
-      document.getElementById("like-count").innerHTML = "좋아요" + response.data.like_count + "개";
+      const response = await axios.post("/like", { post_pk: "{{post.pk}}" });
+      document.getElementById("like-count").innerHTML =
+        "좋아요" + response.data.like_count + "개";
       likeValue.value = response.data.like_status;
       changeLikeColor();
-    }
-    catch (e) {
+    } catch (e) {
       console.error(e);
-    }
-  }
-
-  const changeLikeColor = () => {
-    if(parseInt(likeValue.value) == 0){
-      likeCount.style.color="black";
-    } else if (parseInt(likeValue.value) > 0){
-      likeCount.style.color="red";
     }
   };
 
+  const changeLikeColor = () => {
+    if (parseInt(likeValue.value) == 0) {
+      likeCount.style.color = "black";
+    } else if (parseInt(likeValue.value) > 0) {
+      likeCount.style.color = "red";
+    }
+  };
 
   changeLikeColor();
-
-</script>  
+</script>
 {% endblock content %}
-
-

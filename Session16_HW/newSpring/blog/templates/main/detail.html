@@ -4,12 +4,12 @@ endblock css %} {% endcomment %} {% block content %}
 <section id="home">
   <ul>
     {% for post in posts %}
-    <li c>
-      <a href="">{{ post.content }}</a>
-      <a href="">{{ post.title }}</a>
+    <li>
+      <a href="{% url 'detailMore' post.pk %}">{{ post.content }}</a>
+      <a href="{% url 'detailMore' post.pk %}">{{ post.title }}</a>
 
-      {% if profile.user.first_name != None %}
-      <a href="">{{ post.likes }}</a>
+      {% if post.likes.all %}
+      <a href="{% url 'detailMore' post.pk %}">{{ post.likes }}</a>
       {% endif %}
     </li>
     {% endfor %}
