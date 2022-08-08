@@ -76,5 +76,8 @@
 <br/>
 
 > ### 실제 페이지 view
+> <img width="1051" alt="image" src="https://user-images.githubusercontent.com/55613446/183384697-edd465a8-7055-49a5-884d-266081e7ea1f.png">
+<img width="402" alt="image" src="https://user-images.githubusercontent.com/55613446/183384835-e7e8789b-9f34-402b-b4b1-a1251a3e76ac.png">
+
 
 <br/>
