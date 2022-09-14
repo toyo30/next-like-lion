@@ -4,6 +4,7 @@
 
 - 무엇이 부족하고, 무엇을 보충해야 할지 알 수 있었습니다.
 - 3월과 비교하여 성장했다는 것을 느낍니다.
+
 <br/>
 
 > ### 아이디어 한 줄 요약
@@ -51,17 +52,11 @@
 ~~modal~~
 ~~css~~
 
-추후 보완하겠습니다.
+추후 보완 예정
 
 > ### 사용 스택
 >
-> _~~BackEnd: Django - restful api~~
-> <br/>
-> _~~FrontEnd: React with typescript~~
-> <br/>
-> *~~deploy: aws(배포를 하면 좋겠습니다)~~
-> <br/>
-> *HTML, CSS, Javascript, Django
+> _~~BackEnd: Django - restful api~~ > <br/> > _~~FrontEnd: React with typescript~~ > <br/> > *~~deploy: aws(배포를 하면 좋겠습니다)~~ > <br/> > *HTML, CSS, Javascript, Django
 
 <br/>
 
@@ -80,8 +75,5 @@
 <br/>
 
 > ### 실제 페이지 view
-> <img width="1051" alt="image" src="https://user-images.githubusercontent.com/55613446/183384697-edd465a8-7055-49a5-884d-266081e7ea1f.png">
-<img width="402" alt="image" src="https://user-images.githubusercontent.com/55613446/183384835-e7e8789b-9f34-402b-b4b1-a1251a3e76ac.png">
-
 
 <br/>
